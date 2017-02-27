@@ -1,21 +1,27 @@
+import React from 'react';
 import { FlowRouter } from 'meteor/kadira:flow-router';
-import { BlazeLayout } from 'meteor/kadira:blaze-layout';
-
-// Import needed templates
-import '../../ui/layouts/body/body.js';
-import '../../ui/pages/home/home.js';
-import '../../ui/pages/not-found/not-found.js';
+import { mount } from 'react-mounter';
+import MainLayout from '../../ui/layouts/body/MainLayout.jsx';
+import Home from '../../ui/pages/Home.jsx';
+import Gallery from '../../ui/pages/Gallery.jsx';
 
 // Set up all routes in the app
 FlowRouter.route('/', {
-  name: 'App.home',
   action() {
-    BlazeLayout.render('App_body', { main: 'App_home' });
-  },
+    mount(MainLayout, {
+      content: <Home />
+    })
+  }
+});
+
+FlowRouter.route('/gallery', {
+  action() {
+    mount(MainLayout, {
+      content: <Gallery />
+    })
+  }
 });
 
 FlowRouter.notFound = {
-  action() {
-    BlazeLayout.render('App_body', { main: 'App_notFound' });
-  },
+  action() {},
 };
