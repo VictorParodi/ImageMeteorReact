@@ -3,11 +3,13 @@ import IconHome from '../components/IconHome.jsx';
 
 export default class Home extends Component {
     iconsList() {
-        return icons = [
+        let icons = [
             {iconName: 'find', content: 'Explore', subContent: 'Look the gallery', link: '/gallery'},
             {iconName: 'users', content: 'Sign Up', subContent: 'Become a member', link: '/test'},
             {iconName: 'user', content: 'Login', subContent: 'Upload and share', link: '/testing'}
         ]
+
+        return icons;
     }
 
     render() {

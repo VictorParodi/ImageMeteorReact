@@ -1,9 +1,15 @@
 import React from 'react';
 
-const MainLayout = ({content}) => {
+const MainLayout = ({content ,topContent}) => {
     return (
         <div className="container--global">
-            {content}
+            <header>
+                {topContent}
+            </header>
+
+            <main>
+                {content}
+            </main>
         </div>
     )
 }

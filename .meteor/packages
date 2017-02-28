@@ -24,3 +24,6 @@ practicalmeteor:mocha             # A package for writing and running your meteo
 johanbrook:publication-collector  # Test a Meteor publication by collecting its output
 semantic:ui
 juliancwirko:postcss
+ultimatejs:tracker-react
+autopublish
+insecure
