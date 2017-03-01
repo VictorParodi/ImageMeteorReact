@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 
 export default class HeaderGallery extends Component {
+    addCard() {
+        $('.ui.addCard.modal').modal('show');
+    }
+
     render() {
         return (
             <div className="ui grid">
@@ -8,16 +12,20 @@ export default class HeaderGallery extends Component {
                     <div className="column">
                         <div className="ui text menu menu--customized">
                             <div className="header item"> Welcome </div>
-                            <a href="#" className="item">
-                                Item 1
+                            <a href="/" className="item">
+                                Home
                             </a>
 
-                            <a href="#" className="item">
-                                Item 2
+                            <a href="/signup" className="item">
+                                Sign up
                             </a>
 
-                            <a href="#" className="item">
-                                Item 3
+                            <a href="/login" className="item">
+                                Login
+                            </a>
+
+                            <a className="item" onClick={this.addCard}>
+                                Add card
                             </a>
                         </div>
                     </div>

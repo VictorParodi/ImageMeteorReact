@@ -5,8 +5,8 @@ export default class Home extends Component {
     iconsList() {
         let icons = [
             {iconName: 'find', content: 'Explore', subContent: 'Look the gallery', link: '/gallery'},
-            {iconName: 'users', content: 'Sign Up', subContent: 'Become a member', link: '/test'},
-            {iconName: 'user', content: 'Login', subContent: 'Upload and share', link: '/testing'}
+            {iconName: 'users', content: 'Sign Up', subContent: 'Become a member', link: '/signup'},
+            {iconName: 'user', content: 'Login', subContent: 'Upload and share', link: '/login'}
         ]
 
         return icons;

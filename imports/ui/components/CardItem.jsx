@@ -7,11 +7,11 @@ export default class CardItem extends Component {
                 <div className="ui card card-container">
                     <div className="content">
                         {/*<div className="right floated meta"> 101 </div>*/}
-                        <img className="ui avatar image" src={`img/${this.props.card.createdByImage}`} /> {this.props.card.createdBy}
+                        <img className="ui avatar image" src={`${this.props.card.createdByImage}`} /> {this.props.card.createdBy}
                     </div>
 
                     <div className="image">
-                        <img src={`img/${this.props.card.cardImage}`} className="image--customized" />
+                        <img src={`${this.props.card.cardImage}`} className="image--customized" />
                     </div>
 
                     <div className="content">
@@ -20,7 +20,7 @@ export default class CardItem extends Component {
                     </div>
 
                     <div className="extra content">
-                        <a><i className="large heart icon"></i> Like </a>
+                        <a><i className="large heart icon"></i> {this.props.card.likesCounter} </a>
                     </div>
                 </div>
             </div>

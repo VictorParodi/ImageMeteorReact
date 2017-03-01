@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CardItem from '../components/CardItem.jsx';
+import AddCardForm from '../components/AddCardForm.jsx';
 import Cards from '../../api/cards/cards.js';
 import TrackerReact from 'meteor/ultimatejs:tracker-react';
 
@@ -47,7 +48,7 @@ export default class Gallery extends TrackerReact(Component) {
     }
 
     cards() {
-        return Cards.find().fetch();
+        return Cards.find({}, {sort: {createdAt: -1} }).fetch();
     }
 
     render() {
@@ -66,6 +67,8 @@ export default class Gallery extends TrackerReact(Component) {
                         })
                     }
                 </div>
+
+                <AddCardForm />
             </div>
         )
     }
