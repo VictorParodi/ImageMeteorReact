@@ -10,6 +10,7 @@ import LoginForm from '../../ui/components/LoginForm.jsx';
 
 // Set up all routes in the app
 FlowRouter.route('/', {
+  name:'home',
   action() {
     mount(MainLayout, {
       content: <Home />
@@ -18,6 +19,7 @@ FlowRouter.route('/', {
 });
 
 FlowRouter.route('/gallery', {
+  name: 'gallery',
   action() {
     mount(MainLayout, {
       topContent: <HeaderGallery />,
@@ -27,6 +29,7 @@ FlowRouter.route('/gallery', {
 });
 
 FlowRouter.route('/signup', {
+  name:'signup',
   action() {
     mount(MainLayout, {
       content: <SignupForm />
@@ -35,6 +38,7 @@ FlowRouter.route('/signup', {
 });
 
 FlowRouter.route('/login', {
+  name:'login',
   action() {
     mount(MainLayout, {
       content: <LoginForm />

@@ -1,8 +1,22 @@
+import { Meteor } from 'meteor/meteor';
 import React, { Component } from 'react';
+import TrackerReact from 'meteor/ultimatejs:tracker-react';
+import Usernavbar from './Usernavbar.jsx';
+import Guestnavbar from './Guestnavbar.jsx';
 
-export default class HeaderGallery extends Component {
-    addCard() {
-        $('.ui.addCard.modal').modal('show');
+export default class HeaderGallery extends TrackerReact(Component) {
+    constructor(props) {
+        super(props);
+    }
+
+    currentUser() {
+        let currentuser = Meteor.user()? Meteor.user().username : '';
+        return currentuser;
+    }
+
+    navBar() {
+        let navbar = Meteor.user()? <Usernavbar user={Meteor.user().username}/> : <Guestnavbar />;
+        return navbar;
     }
 
     render() {
@@ -10,24 +24,7 @@ export default class HeaderGallery extends Component {
             <div className="ui grid">
                 <div className="one column row">
                     <div className="column">
-                        <div className="ui text menu menu--customized">
-                            <div className="header item"> Welcome </div>
-                            <a href="/" className="item">
-                                Home
-                            </a>
-
-                            <a href="/signup" className="item">
-                                Sign up
-                            </a>
-
-                            <a href="/login" className="item">
-                                Login
-                            </a>
-
-                            <a className="item" onClick={this.addCard}>
-                                Add card
-                            </a>
-                        </div>
+                        {this.navBar()}
                     </div>
                 </div>
             </div>

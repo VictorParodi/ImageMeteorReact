@@ -1,3 +1,4 @@
+import { Meteor } from 'meteor/meteor';
 import React, { Component } from 'react';
 import Cards from '../../api/cards/cards.js';
 
@@ -5,22 +6,21 @@ export default class AddCardForm extends Component {
     addCard(event) {
         event.preventDefault();
 
+        let userlog = Meteor.user();
         let cardName = this.refs.cardName.value.trim();
         let cardImage = this.refs.cardImage.value.trim();
         let cardDescription = this.refs.cardDescription.value.trim();
 
         let newCard = {
-            createdBy: "Diana",
-            createdById: "asd000",
-            createdByImage: "img/user4.jpg", // COLOCAR EL CAMPO DE LA FOTO EN EL FORMULARIO DE REGISTRO
+            createdBy: userlog.username,
+            createdById: userlog._id,
+            createdByImage: userlog.profile.userImage,
             cardName: cardName,
             cardImage: cardImage, 
             cardDescription: cardDescription,
             createdAt: new Date(),
             likesCounter: 0
         }
-
-        console.log(newCard);
 
         Cards.insert(newCard);
 

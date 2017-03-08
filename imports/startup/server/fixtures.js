@@ -28,27 +28,27 @@ Meteor.startup(() => {
         likesCounter: 0
       },
 
-      {
-        createdBy: "Allison",
-        createdById: "asd222",
-        createdByImage: "img/user3.jpg",
-        cardName: "Image Card 3",
-        cardImage: "img/image3.jpg",
-        cardDescription: "card 3 description",
-        createdAt: new Date(),
-        likesCounter: 0
-      },
+      // {
+      //   createdBy: "Allison",
+      //   createdById: "asd222",
+      //   createdByImage: "img/user3.jpg",
+      //   cardName: "Image Card 3",
+      //   cardImage: "img/image3.jpg",
+      //   cardDescription: "card 3 description",
+      //   createdAt: new Date(),
+      //   likesCounter: 0
+      // },
 
-      {
-        createdBy: "Diana",
-        createdById: "asd333",
-        createdByImage: "img/user4.jpg",
-        cardName: "Image Card 4",
-        cardImage: "img/image4.jpg",
-        cardDescription: "card 4 description",
-        createdAt: new Date(),
-        likesCounter: 0
-      }
+      // {
+      //   createdBy: "Diana",
+      //   createdById: "asd333",
+      //   createdByImage: "img/user4.jpg",
+      //   cardName: "Image Card 4",
+      //   cardImage: "img/image4.jpg",
+      //   cardDescription: "card 4 description",
+      //   createdAt: new Date(),
+      //   likesCounter: 0
+      // }
     ];
 
     cardItem.forEach((card) => {
