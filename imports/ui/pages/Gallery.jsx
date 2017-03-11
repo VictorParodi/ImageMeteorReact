@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CardItem from '../components/CardItem.jsx';
+import CardItem from '../components/cardItem/CardItem.jsx';
 import AddCardForm from '../components/AddCardForm.jsx';
 import Cards from '../../api/cards/cards.js';
 import TrackerReact from 'meteor/ultimatejs:tracker-react';
@@ -10,41 +10,41 @@ export default class Gallery extends TrackerReact(Component) {
     }
 
     cardsList() {
-        let cards = [
-            {
-                userName: 'Kate',
-                userImage: 'user1.jpg',
-                cardName: 'Image Card',
-                cardImage: 'image1.jpg',
-                cardDescription: 'A brief image description'
-            },
+        // let cards = [
+        //     {
+        //         userName: 'Kate',
+        //         userImage: 'user1.jpg',
+        //         cardName: 'Image Card',
+        //         cardImage: 'image1.jpg',
+        //         cardDescription: 'A brief image description'
+        //     },
 
-            {
-                userName: 'Kate',
-                userImage: 'user1.jpg',
-                cardName: 'Image Card',
-                cardImage: 'image2.jpg',
-                cardDescription: 'A brief image description'
-            },
+        //     {
+        //         userName: 'Kate',
+        //         userImage: 'user1.jpg',
+        //         cardName: 'Image Card',
+        //         cardImage: 'image2.jpg',
+        //         cardDescription: 'A brief image description'
+        //     },
 
-            {
-                userName: 'Kate',
-                userImage: 'user1.jpg',
-                cardName: 'Image Card',
-                cardImage: 'image3.jpg',
-                cardDescription: 'A brief image description'
-            },
+        //     {
+        //         userName: 'Kate',
+        //         userImage: 'user1.jpg',
+        //         cardName: 'Image Card',
+        //         cardImage: 'image3.jpg',
+        //         cardDescription: 'A brief image description'
+        //     },
 
-            {
-                userName: 'Kate',
-                userImage: 'user1.jpg',
-                cardName: 'Image Card',
-                cardImage: 'image4.jpg',
-                cardDescription: 'A brief image description'
-            }
-        ]
+        //     {
+        //         userName: 'Kate',
+        //         userImage: 'user1.jpg',
+        //         cardName: 'Image Card',
+        //         cardImage: 'image4.jpg',
+        //         cardDescription: 'A brief image description'
+        //     }
+        // ]
 
-        return cards;
+        // return cards;
     }
 
     cards() {

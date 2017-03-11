@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
+import { FlowRouter } from 'meteor/kadira:flow-router';
 
 export default class Guestnavbar extends Component {
+    goingTo(route) {
+        FlowRouter.go(route);
+    }
+
     render() {
         return (
             <div className="ui text menu menu--customized">
